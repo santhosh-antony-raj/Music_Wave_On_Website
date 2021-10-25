@@ -1,0 +1,46 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'poppins', sans-serif;
+}
+.hero{
+	width: 100%;
+	height:  100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.5),#480000), url(img/BG2.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.music img{
+	width: 300px; 
+}
+.music{
+	width: 85%;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #000;
+	display: flex;
+}
+.info{
+	color: #fff;
+	margin-left: 30px;
+	flex: 1;
+}
+.info p {
+	font-size: 20px;
+	margin: 10px 0 60px;
+
+}
+.controls{
+	margin-top: 45px;
+	display: flex;
+	align-items: center;
+
+}
+.controls img{
+	width: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+}

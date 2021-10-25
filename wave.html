@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>I-VILLAGER</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/wavesurfer.js"></script>
+</head>
+<body>
+	<div class="hero">
+		<div class="music">
+			<img src="./img/IV.jpg">
+			<div class="info">
+				<h1>Dope Shope - Yo Yo Honey Singh, feat. Deep Money </h1>
+				<p>Album - IV(INTERNATIONAL VILLAGER)</p>
+				<div id="waveform"></div>
+				<div class="controls">
+					<img src="./img/play.png" id="playBtn" title="Play / Pause">
+					<img src="./img/stop.png" id="stopBtn" title="Stop">
+					<img src="./img/speaker.png" id="speakerBtn" title="Mute / Unmute">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		
+		var wavesurfer = WaveSurfer.create({
+			
+			container: '#waveform',
+            waveColor: '#dde5ec',
+       		progressColor: '#03cebf',
+			barWidth: 4,
+			height: 90,
+			responsive: true,
+			hideScrollbar: true,
+			barRadius: 4
+		});
+		wavesurfer.load('img/dope.mp3');
+		playBtn.onclick = function(){
+			wavesurfer.playPause();
+		
+			if(playBtn.src.match("play")){
+                playBtn.src  = "img/pause.png";
+            }
+            else{
+                playBtn.src = "img/play.png"
+            }
+        }
+        
+        stopBtn.onclick = function(){
+            wavesurfer.stop();
+            playBtn.src = "img/play.png"
+        }
+		playBtn = document.getElementById("playBtn");
+		stopBtn = document.getElementById("stopBtn");
+    	speakerBtn = document.getElemenyById("speakerBtn");
+
+	
+
+		
+	
+	</script>
+</body>
+</html>
